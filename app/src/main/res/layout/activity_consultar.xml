@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd2">
+
+    <TabHost
+        android:layout_margin="20dp"
+        android:id="@+id/TabHost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- Consultar clientes -->
+                <ScrollView
+                    android:id="@+id/consultarCLiente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                    <TableLayout
+                        android:id="@+id/TableLayout_cliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*">
+                        <!-- Botón mostrar clientes -->
+                        <Button
+                            android:layout_marginTop="35dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mostrar clientes"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:id="@+id/button_clientes" />
+                        <!-- Filtro busqueda clientes-->
+                        <RadioGroup android:id="@+id/radioClientes">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/todosClientes"
+                                android:text="Todos los clientes"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/clientesAlquiler"
+                                android:text="Clientes en alquiler"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+                        <!-- Resultados busqueda clientes -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_clientes"
+                            android:textColor="#000000"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center" />
+                        <!-- Botón resetear consultas -->
+                        <Button
+                            android:layout_marginTop="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Borrar"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_reset" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="volver"
+                            android:id="@+id/volver1" />
+                    </TableLayout>
+                </ScrollView>
+                <!-- Consultar Libros -->
+                <ScrollView
+                    android:id="@+id/consultarLibros"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                    <TableLayout
+                        android:id="@+id/TableLayout_libro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*">
+                        <!-- Botón mostrar libros -->
+                        <Button
+                            android:layout_marginTop="35dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mostrar Libros"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:id="@+id/button_libros" />
+                        <!-- Filtro busqueda libros-->
+                        <RadioGroup android:id="@+id/radioLibros">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/todosLibros"
+                                android:text="Todos los Libros"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/disponibles"
+                                android:text="Libros disponibles"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+                        <!-- Resultados busqueda libros -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_libros"
+                            android:textColor="#000000"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center" />
+                        <!-- Seleccionar detalles de libros -->
+                        <RelativeLayout
+                            android:descendantFocusability="beforeDescendants"
+                            android:focusableInTouchMode="true">
+
+                            <TextView
+                                android:layout_marginTop="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="#021079"
+                                android:id="@+id/introducetv"
+                                android:text="Introduce id para ver detalles" />
+
+                            <EditText
+                                android:layout_below="@+id/introducetv"
+                                android:layout_marginTop="25dp"
+                                android:id="@+id/detalles"
+                                android:layout_width="200dp"
+                                android:layout_height="30dp"
+                                android:maxLength="7"
+                                android:maxLines="1"
+                                android:inputType="textPersonName"
+                                android:background="#E0E0E0"
+                                android:textColor="#000000"
+                                android:focusableInTouchMode="true" />
+
+                            <Button
+                                android:layout_below="@+id/introducetv"
+                                android:layout_marginTop="15dp"
+                                android:layout_toRightOf="@+id/detalles"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="Ver detalles"
+                                android:id="@+id/button_detalles" />
+                        </RelativeLayout>
+                        <!-- Botón resetear consultas -->
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Borrar"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/button_reset1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="volver"
+                            android:id="@+id/volver" />
+                        <!-- Mostrar detalles Libros-->
+                        <RelativeLayout
+                            android:id="@+id/datosDeLibro"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:id="@+id/imagenLibro" />
+
+                            <TextView
+                                android:layout_marginTop="40dp"
+                                android:id="@+id/descripcionLibro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/imagenLibro"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:paddingLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/tituloLibro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/imagenLibro"
+                                android:layout_below="@+id/descripcionLibro"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:paddingLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/totalDetalles"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/imagenLibro"
+                                android:layout_below="@+id/tituloLibro"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:paddingLeft="5dp" />
+                        </RelativeLayout>
+                    </TableLayout>
+                </ScrollView>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

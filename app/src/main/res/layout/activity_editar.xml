@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd2"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <TabHost
+        android:layout_margin="20dp"
+        android:id="@+id/TabHost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- Añadir nuevo cliente -->
+                <ScrollView
+                    android:id="@+id/añadirCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                    <TableLayout
+                        android:id="@+id/TableLayout_Cliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*">
+                        <!-- Nombre del cliente -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:textStyle="bold"
+                            android:text="Nombre:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_Nombre"
+                            android:layout_height="wrap_content"
+                            android:maxLength="20"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- Número de teléfono -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:textStyle="bold"
+                            android:text="Teléfono:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_Numero"
+                            android:layout_height="wrap_content"
+                            android:maxLength="9"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="phone"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- DNI -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:text="DNI:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_DNI"
+                            android:layout_height="wrap_content"
+                            android:maxLength="9"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- Botón añadir cliente-->
+                        <Button
+                            android:layout_marginTop="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Añadir Nuevo Cliente"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/boton_cliente" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="volver"
+                            android:id="@+id/volver1" />
+                    </TableLayout>
+                </ScrollView>
+                <!-- Añadir nuevo Libro -->
+                <ScrollView
+                    android:id="@+id/añadirLibro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                    <TableLayout
+                        android:id="@+id/TableLayout_libro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*">
+                        <!-- Descripcion Libro -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:text="Descripción:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_Descripcion"
+                            android:layout_height="wrap_content"
+                            android:maxLength="20"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- Titulo -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:text="Titulo:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_Titulo"
+                            android:layout_height="wrap_content"
+                            android:maxLength="15"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- Autor -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:text="Autor:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_Autor"
+                            android:layout_height="wrap_content"
+                            android:maxLength="9"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- Id Libro -->
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:text="Id Libro:"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#021079" />
+
+                        <EditText
+                            android:id="@+id/EditText_IdLibro"
+                            android:layout_height="wrap_content"
+                            android:maxLength="9"
+                            android:layout_width="fill_parent"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            android:background="#E0E0E0"
+                            android:textColor="#000000" />
+                        <!-- Botón añadir Libro -->
+                        <Button
+                            android:layout_marginTop="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Añadir nuevo Libro"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/button_libro" />
+                        <!-- Boton volver -->
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="volver"
+                            android:id="@+id/volver" />
+                    </TableLayout>
+                </ScrollView>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

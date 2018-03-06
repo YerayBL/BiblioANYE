@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BiblioANYE</string>
+    <string name="app_info">
+        Copyright© AngieYeray | IES Frances de Borja Moll 2018
+    </string>
+    <string-array name="items">
+        <item>Consultar Datos</item>
+        <item>Añadir Datos</item>
+        <item>Alquilar Libro</item>
+        <item>Devolver Libro</item>
+        <item>Datos prueba</item>
+    </string-array>
+    <string name="tab">
+        \u0009
+    </string>
+</resources>

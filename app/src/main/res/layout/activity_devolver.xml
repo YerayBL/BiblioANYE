@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd2"
+    android:padding="30dp"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="15dp"
+                android:text="Devolver Libro"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#909090"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+            <!-- ID Libro -->
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:text="Id del Libro:"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#021079" />
+
+            <EditText
+                android:id="@+id/idET"
+                android:layout_height="wrap_content"
+                android:maxLength="7"
+                android:layout_width="fill_parent"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:background="#E0E0E0"
+                android:textColor="#000000" />
+            <!-- Seleccionar devolución a tiempo-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- CheckBox devolución-->
+                <RelativeLayout
+                    android:id="@+id/atiempo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginTop="40dp"
+                        android:id="@+id/check"
+                        android:text="Devolución conforme    "
+                        android:textColor="#021079"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <!-- Calendario devolución -->
+                <RelativeLayout
+                    android:id="@+id/calendario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/tv_dev"
+                        android:layout_marginTop="20dp"
+                        android:text="Fecha devolución:"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#021079" />
+
+                    <Button
+                        android:layout_below="@id/tv_dev"
+                        android:id="@+id/botonFecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="seleccionar fecha" />
+
+                    <TextView
+                        android:layout_below="@id/tv_dev"
+                        android:id="@+id/dias"
+                        android:visibility="invisible"
+                        android:layout_width="140dp"
+                        android:layout_height="30dp"
+                        android:layout_toRightOf="@+id/botonFecha"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:background="#ffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- Botón borrar devolucón-->
+            <Button
+                android:layout_marginTop="25dp"
+                android:id="@+id/borrarDevolucion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Borrar" />
+            <!-- Botón Devolver alquiler-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Devolver"
+                android:layout_gravity="center"
+                android:id="@+id/boton_devolver" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

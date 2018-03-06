@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd2"
+    android:padding="30dp"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="15dp"
+                android:text="Alquilar Libro"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#909090"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+            <!-- DNI cliente -->
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:text="DNI Cliente:"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#021079" />
+
+            <EditText
+                android:id="@+id/EditText_DNI"
+                android:layout_height="wrap_content"
+                android:maxLength="9"
+                android:layout_width="fill_parent"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:background="#E0E0E0"
+                android:textColor="#000000" />
+
+            <!-- Id libro -->
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:text="Id Libro:"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#021079" />
+
+            <EditText
+                android:id="@+id/IdET"
+                android:layout_height="wrap_content"
+                android:maxLength="7"
+                android:layout_width="fill_parent"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:background="#E0E0E0"
+                android:textColor="#000000" />
+
+            <!-- Días de alquiler -->
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:text="Fecha devolución:"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#021079" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/botonFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="seleccionar fecha" />
+
+                <TextView
+                    android:id="@+id/dias"
+                    android:visibility="invisible"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/botonFecha"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+
+            <!-- Botón calcular alquiler-->
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:layout_gravity="center"
+                android:id="@+id/boton_calcular" />
+
+            <!-- Botón borrar alquiler-->
+            <Button
+                android:id="@+id/borrarAlquiler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Borrar" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Botón aceptar alquiler-->
+                <Button
+                    android:id="@+id/aceptarAlquiler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="alquilar" />
+
+                <!-- Mostrar alquiler-->
+                <RelativeLayout
+                    android:layout_below="@+id/aceptarAlquiler"
+                    android:id="@+id/datosAlquiler"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/imagenLibro" />
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/datosLibro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imagenLibro"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:paddingLeft="5dp" />
+
+                    <TextView
+                        android:id="@+id/datosCliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imagenLibro"
+                        android:layout_below="@+id/datosLibro"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:paddingLeft="5dp" />
+
+                    <TextView
+                        android:id="@+id/totalAlquiler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imagenLibro"
+                        android:layout_below="@+id/datosCliente"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

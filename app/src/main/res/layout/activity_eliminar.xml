@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd2">
+    <!-- Botón para añadir datos -->
+    <Button
+        android:layout_marginTop="150dp"
+        android:id="@+id/añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir datos"
+        android:layout_gravity="center_horizontal" />
+    <!-- Botón para eliminar datos -->
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar datos"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
